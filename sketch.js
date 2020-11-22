@@ -59,7 +59,7 @@ function keyPressed() {
  
 if (keyCode === DOWN_ARROW) {
     
-	packageBody.isStatic=false;
+        Matter.Body.setStatic(packageBody,false);ckageBody.isStatic=false;
 	packageSprite.isStatic=false;
     
   }
