@@ -15,7 +15,7 @@ function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
 	
-
+    //keyPressed();
 	packageSprite=createSprite(width/2, 80, 10,10);
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
@@ -31,7 +31,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:1, isStatic:true});
 	World.add(world, packageBody);
 	
 
@@ -56,11 +56,10 @@ function draw() {
 }
 
 function keyPressed() {
- 
-if (keyCode === DOWN_ARROW) {
-    
-        Matter.Body.setStatic(packageBody,false);ckageBody.isStatic=false;
+ if (keyCode === DOWN_ARROW) {
+    Matter.Body.setStatic(packageBody,false);    
 	packageSprite.isStatic=false;
+	
     
   }
 }
